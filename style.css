@@ -78,11 +78,12 @@ header{
 }
 
 #profile-link img{
-    margin-right: 10px;
+    margin-right: 3vw;
     width: auto;
+    margin-top: 1vh;
     max-width: 75px;
     height: auto;
-    max-height: 10vh;
+    max-height: 8vh;
 }
 
 #welcome-section{

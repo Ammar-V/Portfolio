@@ -1,3 +1,4 @@
+import About from "./Components/About";
 import Home from "./Components/Home";
 import Navbar from "./Components/Navbar";
 import  { BrowserRouter as Router, Route, Routes } from 'react-router-dom' 
@@ -8,9 +9,13 @@ function App() {
     <Router>
       <div className="App">
         <Navbar />
-        <Routes>
-            <Route path="/" element={ <Home /> }/>
-        </Routes>
+        <div className="content">
+          <Routes>
+              <Route path="/" element={ <Home /> }/>
+          </Routes>
+          <About />
+
+        </div>
       </div>
     </Router>
   );

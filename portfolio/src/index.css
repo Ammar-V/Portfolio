@@ -23,6 +23,7 @@ body {
 .content {
 
   padding: 0 100px;
+  max-width: 100%;
 
 }
 
@@ -68,7 +69,7 @@ header {
 }
 
 
-.homepage {
+#homepage {
   background-color: #FFF;
 
   margin: 0 auto;
@@ -86,32 +87,37 @@ header {
   border-bottom: 1px solid #000;
 }
 
-.homepage h1 {
+#homepage h1 {
   margin: 50px auto;
   padding: 0 auto;
   font-size: 80px;
 }
-
-#about {
+.section {
   height: auto;
   min-width: 100%;
+  max-width: 100%;
   min-height: 90vh; 
 
   text-align: left;
 
-  margin: 40px 5%;
+  /* margin: 0 5%; */
+  padding-top: 40px;
+
   border-bottom: 1px solid #000;
   
 }
 
-#about h2 {
+.section h2 {
   font-size: 30px;
+  padding: 0 5%;
 }
 
 .about-content {
   display: flex;
   justify-content: space-between;
   align-self: baseline;
+
+  padding: 0 5%;
 }
 
 .about-description {
@@ -131,3 +137,56 @@ header {
   margin-right: 10%;
 
 }
+
+.project-gallery {
+  display: flex;
+  justify-content: center;
+  align-self: baseline;
+
+  flex-wrap: wrap;
+
+  margin: 5%;
+
+}
+.project-tile {
+
+  width: 250px;
+  height: auto;
+
+  margin: 30px;
+
+  display: flex;
+  text-align: center;
+  
+  flex-basis: 25%;
+
+}
+
+
+.project-tile a {
+  text-decoration: none;
+
+}
+
+.project-tile img {
+  width: 100%;
+  height: auto;
+ 
+  border-radius: 5%;
+
+  transition: transform .25s, filter 0.5s ease-in-out;
+  /* filter: grayscale(60%); */
+}
+
+.project-tile:hover img {
+  filter: grayscale(0);
+  transform: scale(1.1);
+}
+
+.project-tile p {
+
+  font-size: 20px;
+}
+
+
+

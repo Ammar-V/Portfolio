@@ -2,7 +2,7 @@ import me from "../me.jpg"
 
 const About = () => {
   return ( 
-    <div id="about">
+    <div id="about" className="section">
       <h2>About me - Who am I?</h2>
       <div className="about-content">
         <div className="about-description">

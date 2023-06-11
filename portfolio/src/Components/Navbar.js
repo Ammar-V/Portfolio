@@ -4,14 +4,12 @@ const Navbar = () => {
   return ( 
     <header>
       <nav className="navbar">
-          <Link to='/'>
+          <a href='#homepage'>
             <h1>Ammar Vora</h1>
-          </Link>
+          </a>
           <div className="links">
-            {/* <Link to="/">Ammar Vora</Link> */}
             <a href="#about">About</a>
             <Link to="/experience">Experience</Link>
-            <Link to="/portfolio">Projects</Link>
             <Link to="/contact">Contact</Link>
             <Link to="/resume">Resume</Link>
           </div>

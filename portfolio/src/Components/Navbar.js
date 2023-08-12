@@ -4,12 +4,12 @@ const Navbar = () => {
   return ( 
     <header>
       <nav className="navbar">
-          <a href='#homepage'>
+          <Link to='/'>
             <h1>Ammar Vora</h1>
-          </a>
+          </Link>
           <div className="links">
-            <a href="#about">About</a>
-            <a href="#experience">Experience</a>
+            <Link to="/" relative="">About</Link>
+            <Link to="/" relative="">Experience</Link>
             <Link to="/contact">Contact</Link>
             <Link to="/resume">Resume</Link>
           </div>

@@ -1,18 +1,19 @@
+import { Link } from 'react-router-dom'
+
 const ProjectTile = (props) => {
 
   const title = props.data.title;
   const img = props.data.img;
   const altText = props.data.altText;
-  console.log(`IM HERE with ${title}`);
 
   return ( 
     <div className="project-tile">
-      <a href="/">
+      <Link to="/project">
         <div className="tile-content">
           <img className="project-thumbnail" src={img} alt={altText}/>
           <p>{title}</p>
         </div>
-      </a>
+      </Link>
     </div>
    );
 }

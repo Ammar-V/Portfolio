@@ -22,7 +22,7 @@ body {
 
 .content {
 
-  padding: 0 100px;
+  padding: 0 10vw;
   max-width: 100%;
 
 }
@@ -158,14 +158,12 @@ header {
   display: flex;
   text-align: center;
   
-  flex-basis: 25%;
+  flex-basis: 20%;
 
 }
 
-
 .project-tile a {
   text-decoration: none;
-
 }
 
 .project-tile img {
@@ -186,6 +184,23 @@ header {
 .project-tile p {
 
   font-size: 20px;
+}
+
+.project-intro h1{
+  font-size: 50px;
+}
+
+
+.project-content {
+  height: auto;
+  max-width: 65%;
+  min-height: 90vh; 
+
+  text-align: justify;
+
+  margin: auto;
+  padding-top: 40px;
+
 }
 
 

@@ -37,6 +37,7 @@ header {
   position: -webkit-sticky;
   position: sticky;
   top: 0;
+  z-index: 1;
 }
 
 .navbar {
@@ -62,6 +63,7 @@ header {
 .navbar a {
   text-decoration: none;
   padding: 0 20px;
+  color: black;
 }
 
 .navbar .links {
@@ -164,6 +166,7 @@ header {
 
 .project-tile a {
   text-decoration: none;
+  color: black;
 }
 
 .project-tile img {
@@ -176,7 +179,7 @@ header {
   /* filter: grayscale(60%); */
 }
 
-.project-tile:hover img {
+.project-tile:hover img{
   filter: grayscale(0);
   transform: scale(1.1);
 }
@@ -190,7 +193,6 @@ header {
   font-size: 50px;
 }
 
-
 .project-content {
   height: auto;
   max-width: 65%;
@@ -199,8 +201,13 @@ header {
   text-align: justify;
 
   margin: auto;
-  padding-top: 40px;
+  padding: 10vh 0;
 
+}
+
+.project-content img {
+  max-height: auto;
+  max-width: 65%;
 }
 
 

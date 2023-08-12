@@ -1,21 +1,23 @@
 import { useEffect, useState } from "react";
 import ReactMarkdown from "react-markdown";
-import reversi from '../project-content/reversi.md';
 import rehypeRaw from 'rehype-raw';
+import { useParams } from 'react-router-dom';
+
+import { getProject } from "../middleware/project-content";
 
 
 const ProjectPage = () => {
   const [content, setContent] = useState("");
+  const { id: projectId } = useParams();
 
   useEffect(() => {
-    fetch(reversi)
+    const projectObj = getProject(projectId);
+
+    fetch(projectObj.markdown)
     .then((res) => res.text())
     .then((text) => setContent(text));
-  }, []);
-
-  useEffect(() => {
-    console.log(reversi);
-  }, [content])
+  }, [projectId]);
+  
   return ( 
 
 

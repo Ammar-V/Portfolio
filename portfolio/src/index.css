@@ -189,8 +189,44 @@ header {
   font-size: 20px;
 }
 
+.project-intro-img {
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  
+  filter: blur(2px);
+  z-index: -1;
+
+  position: absolute;
+
+  min-width: 100vw;
+  min-height: 70vh;
+
+  padding-top: 8vh;
+  margin: 0 -10vw;
+}
+
+.project-intro {
+  margin: auto;
+  text-align: center;
+  padding-top: 10vh;
+  
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  min-height: 60vh;
+}
+
 .project-intro h1{
-  font-size: 50px;
+  font-size: 60px;
+}
+
+.project-intro img {
+  position: relative;
+  z-index: -1;
+  max-height: inherit;
+  max-width: auto;
 }
 
 .project-content {
@@ -205,10 +241,25 @@ header {
 
 }
 
+.project-content h2 {
+  font-size: 35px;
+}
+
 .project-content img {
   max-height: auto;
   max-width: 65%;
 }
+
+.markdown h1 {
+  font-size: 30px;
+  padding-bottom: 5px;
+  border-bottom: 1px solid lightgray;
+}
+
+.markdown h2 {
+  font-size: 20px;
+}
+
 
 
 

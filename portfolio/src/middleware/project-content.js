@@ -16,21 +16,19 @@ import freegearImg from "../freegear.png";
   Import markdown files
 */
 
-import reversiDesc from "./reversi.md";
-
 const projectDescriptions = [{
   id: 'art',
   title: "Autonomous Rover Team",
   img: artImg,
   altText: "Building the Computer Vision pipeline for an autonomous rover",
-  markdown: reversiDesc
+  markdown: "https://raw.githubusercontent.com/Ammar-V/Portfolio/new/portfolio/src/middleware/art.md"
 },
 {
   id: 'autoronto',
   title: "aUToronto",
   img: autorontoImg,
   altText: "Building a self-driving car for the SAE Autodrive Challenge",
-  markdown: reversiDesc
+  markdown: "https://raw.githubusercontent.com/Ammar-V/Portfolio/new/portfolio/src/middleware/autoronto.md"
 
 },
 {
@@ -45,7 +43,7 @@ const projectDescriptions = [{
   title: "City Explorer",
   img: mapperImg,
   altText: "A mapping software made with C++",
-  markdown: reversiDesc
+  markdown: "https://raw.githubusercontent.com/Ammar-V/Portfolio/new/portfolio/src/middleware/mapper.md"
 },
 {
   id: 'potholes',

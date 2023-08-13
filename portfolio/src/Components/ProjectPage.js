@@ -1,8 +1,8 @@
 import { useEffect, useState } from "react";
 import ReactMarkdown from "react-markdown";
-
 import rehypeRaw from 'rehype-raw';
 import remarkGfm from 'remark-gfm'
+import rehypeHighlight from 'rehype-highlight'
 
 import { useParams } from 'react-router-dom';
 
@@ -18,6 +18,18 @@ const ProjectPage = () => {
     const projectObj = getProject(projectId);
     setProject(projectObj);
 
+    // request.get('http://www.whatever.com/my.csv', function (error, response, body) {
+    //   if (!error && response.statusCode == 200) {
+    //       var csv = body;
+    //       // Continue with your processing here.
+    //   }
+    // });
+
+    // https.get(projectObj.markdown, (res) => {
+    //   console.log(res);
+    // })
+
+
     fetch(projectObj.markdown)
     .then((res) => res.text())
     .then((text) => setContent(text));
@@ -27,8 +39,7 @@ const ProjectPage = () => {
 
 
     <div id="project-page">
-      <div className="project-intro-img" style={ {backgroundImage: `url(${project.img})`} }>
-      </div>
+      {/* <div className="project-intro-img" style={ {backgroundImage: `url(${project.img})`} }></div> */}
       <div className="project-intro">
         <div>
           <h1>{project.title}</h1>
@@ -39,10 +50,10 @@ const ProjectPage = () => {
 
       <div className="project-content">
         <div className="project-page-gallery">
-          <h2>Gallery</h2>
+          <h2>Technologies</h2>
         </div>
         <h2>Description</h2>
-        <ReactMarkdown children={content} rehypePlugins={[rehypeRaw, remarkGfm]} className="markdown"/>
+        <ReactMarkdown children={content} rehypePlugins={[rehypeRaw, rehypeHighlight]} remarkPlugins={[remarkGfm]} className="markdown"/>
       </div>
     </div>
 

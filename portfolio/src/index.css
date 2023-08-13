@@ -194,7 +194,7 @@ header {
   background-position: center;
   background-size: cover;
   
-  filter: blur(2px);
+  /* filter: blur(2px); */
   z-index: -1;
 
   position: absolute;
@@ -209,13 +209,18 @@ header {
 .project-intro {
   margin: auto;
   text-align: center;
-  padding-top: 10vh;
   
   display: flex;
   align-items: center;
   justify-content: center;
+  
+  min-height: 70vh;
+  margin: 0 -10vw;
+  
+  padding-top: 8vh;
 
-  min-height: 60vh;
+  background-color: rgba(255, 255, 255, .15);  
+  /* backdrop-filter: blur(1px); */
 }
 
 .project-intro h1{
@@ -237,7 +242,7 @@ header {
   text-align: justify;
 
   margin: auto;
-  padding: 10vh 0;
+  /* padding: 10vh 0; */
 
 }
 
@@ -247,7 +252,7 @@ header {
 
 .project-content img {
   max-height: auto;
-  max-width: 65%;
+  max-width: 100%;
 }
 
 .markdown h1 {
@@ -260,6 +265,15 @@ header {
   font-size: 20px;
 }
 
+/* .markdown pre {
+  background-color: #f6f8fa;
+  padding: 15px;
+}
 
+.markdown code {
+  background-color: #f6f8fa;
+  padding: 2px;
+  border-radius: 2px;
+} */
 
 

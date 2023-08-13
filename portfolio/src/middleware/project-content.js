@@ -17,7 +17,6 @@ import freegearImg from "../freegear.png";
 */
 
 import reversiDesc from "./reversi.md";
-import potholesDesc from "./potholes.md";
 
 const projectDescriptions = [{
   id: 'art',
@@ -39,7 +38,7 @@ const projectDescriptions = [{
   title: "Rescue Ranger",
   img: rescueImg,
   altText: "Combining Computer Vision with robots to help with search and rescue",
-  markdown: reversiDesc
+  markdown: "https://raw.githubusercontent.com/Ammar-V/Rescue-Ranger/master/README.md"
 },
 {
   id: 'city-explorer',
@@ -53,35 +52,36 @@ const projectDescriptions = [{
   title: "Pothole Augmentation",
   img: potholeImg,
   altText: "A Python script that automates data generation",
-  markdown: potholesDesc
+  markdown: "https://raw.githubusercontent.com/Ammar-V/Potholes/main/README.md"
 },
 {
   id: 'freegear',
   title: "Freegear",
   img: freegearImg,
   altText: "A 90s style racing game that runs on an FPGA",
-  markdown: reversiDesc
+  markdown: "https://raw.githubusercontent.com/Ammar-V/FreegearOnFPGA/main/README.md?token=GHSAT0AAAAAACC4MUCVBZKA3E23W3BXQER2ZGZLHMA"
 },
 {
   id: 'barrels',
   title: "Barrels",
   img: barrelImg,
   altText: "A classical approach to detecting barrels",
-  markdown: reversiDesc
+  markdown: "https://raw.githubusercontent.com/Ammar-V/Barrels/main/README.md"
+  // markdown: barrelsDesc
 },
 {
   id: 'invoice-maker',
   title: "Invoice Maker",
   img: invoiceImg,
   altText: "An industry-style Invoice Maker made with JavaFX",
-  markdown: reversiDesc
+  markdown: "https://raw.githubusercontent.com/Ammar-V/InvoiceMaker/main/README.md"
 },
 {
   id: 'comment-creator',
   title: "Comment Creator",
   img: commentImg,
   altText: "A Java desktop app to help write student evaluations",
-  markdown: reversiDesc
+  markdown: "https://raw.githubusercontent.com/Ammar-V/Comment-Creator/main/README.md"
 }]
 
 const getProject = (id) => {

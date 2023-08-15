@@ -9,7 +9,7 @@ const Experience = () => {
   const [projects, setProjects] = useState([]);
 
   useEffect(() => {
-    setProjects(projectDescriptions)
+    setProjects(projectDescriptions);
   }, []);
 
   return ( 
@@ -19,7 +19,7 @@ const Experience = () => {
       <div className="project-gallery">
         {
           projects.map((project) => {
-            return <ProjectTile data={project} />;
+            return <ProjectTile data={project} key={project.id}/>;
           })
         }
       </div>

@@ -1,4 +1,4 @@
-import me from "../me.jpg"
+import me from "../pics/me.jpg"
 
 const About = () => {
   return ( 

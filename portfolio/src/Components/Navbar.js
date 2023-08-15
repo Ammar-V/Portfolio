@@ -11,7 +11,7 @@ const Navbar = () => {
             <a href={`${window.location.origin}#about`}>About</a>
             <Link to="/" relative="">Experience</Link>
             <Link to="/contact">Contact</Link>
-            <Link to="/resume">Resume</Link>
+            {/* <Link to="/resume">Resume</Link> */}
           </div>
         </nav>
     </header>

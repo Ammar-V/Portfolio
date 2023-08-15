@@ -15,6 +15,7 @@ body {
   -moz-osx-font-smoothing: grayscale;
 
   font-family: 'Karla', sans-serif;
+  color: darkslategrey;
 
   scrollbar-gutter: stable both-edges;
 
@@ -32,7 +33,10 @@ header {
   margin: 0 auto;
   padding: 0 100px;
 
-  background-color: aliceblue;
+  background-color: #f2f2f2;
+  opacity: 98%;
+  color: darkslategrey;
+
 
   position: -webkit-sticky;
   position: sticky;
@@ -52,7 +56,7 @@ header {
   font-size: 20px;
 
   
-  background-color: aliceblue;
+  /* background-color: aliceblue; */
 }
 
 .navbar h1{
@@ -63,7 +67,7 @@ header {
 .navbar a {
   text-decoration: none;
   padding: 0 20px;
-  color: black;
+  color: darkslategrey;
 }
 
 .navbar .links {
@@ -166,7 +170,8 @@ header {
 
 .project-tile a {
   text-decoration: none;
-  color: black;
+  color: lightslategray;
+  font-weight: 500;
 }
 
 .project-tile img {
@@ -219,8 +224,13 @@ header {
   
   padding-top: 8vh;
 
-  background-color: rgba(255, 255, 255, .15);  
-  /* backdrop-filter: blur(1px); */
+  border-bottom: 1px solid lightgray;
+
+
+  /* color: #FFF; */
+
+  /* background-color: rgba(255, 255, 255, .15);   */
+  /* backdrop-filter: blur(5px); */
 }
 
 .project-intro h1{
@@ -232,6 +242,7 @@ header {
   z-index: -1;
   max-height: inherit;
   max-width: auto;
+
 }
 
 .project-content {
@@ -247,7 +258,7 @@ header {
 }
 
 .project-content h2 {
-  font-size: 35px;
+  font-size: 40px;
 }
 
 .project-content img {
@@ -277,3 +288,121 @@ header {
 } */
 
 
+/*
+
+  RESUME
+
+*/
+
+#resume {
+  min-width: 50px;
+  min-height: 50px;
+
+  max-width: 50px;
+  max-height: 50px;
+
+  margin: auto 30px 30px auto;
+  padding: 20px;
+
+  position: -webkit-sticky;
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  z-index: 1;
+  
+  /* border-radius: 50%;
+  border: 1px solid lightslategray; */
+  
+  transition: transform .25s, filter 0.5s ease-in-out;
+}
+
+#resume img {
+  width: 100%;
+  height: auto;
+  
+  filter: invert(34%) sepia(4%) saturate(3351%) hue-rotate(148deg) brightness(91%) contrast(92%);
+}
+
+@keyframes highlight {
+  0%{
+      border-radius: 50%;
+      
+  }
+  100% {
+      border-radius: 20%;
+    border: 1px solid lightslategray;
+  }
+}
+
+#resume:hover {
+  /* transform: scale(1.1); */
+  border-radius: 50%;
+  border: 1px solid lightslategray;
+  padding: 19px;
+}
+
+
+
+
+/*
+
+  FOOTER
+
+*/
+
+#footer {
+  min-width: 100vw;
+  min-height: 40vh;
+
+  margin-top: 100px;
+
+  position: relative;
+  color: darkslategray;
+  
+
+  background-color: #f2f2f2;
+}
+
+.footer-content {
+  text-align: center;
+  padding-top: 10px;
+}
+
+.footer-content h2 {
+  font-size: 40px;
+}
+
+.contact-links {
+  display: flex;
+  flex-direction: row;
+
+
+  align-content: center;
+  justify-content: center;
+  
+}
+
+.contact-item{
+  max-width: 50px;
+  height: auto;
+  text-align: center;
+  margin: 0 20px;
+
+  align-content: center;
+
+  transition: transform .25s, filter 0.5s ease-in-out;
+  filter: invert(34%) sepia(4%) saturate(3351%) hue-rotate(148deg) brightness(91%) contrast(92%);
+}
+
+.contact-item:hover {
+  transform: scale(1.1);
+}
+
+.copyright {
+  position: absolute;
+  bottom: 0;
+  text-align: center;
+
+  min-width: 100vw;
+  border-top:1px solid lightgray;
+}

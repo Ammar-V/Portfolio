@@ -5,6 +5,8 @@ import Navbar from "./Components/Navbar";
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom' 
 import ProjectPage from "./Components/ProjectPage";
 import ScrollToTop from "./Components/ScrollToTop";
+import Footer from "./Components/Footer";
+import Resume from "./Components/Resume";
 
 function App() {
   return (
@@ -24,6 +26,8 @@ function App() {
               <Route path="/projects/:id" element={ <ProjectPage /> } />
           </Routes>
         </div>
+        <Footer />
+        <Resume />
       </div>
     </Router>
   );

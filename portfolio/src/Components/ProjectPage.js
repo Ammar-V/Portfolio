@@ -12,23 +12,12 @@ import { getProject } from "../middleware/project-content";
 const ProjectPage = () => {
   const [project, setProject] = useState("");
   const [content, setContent] = useState("");
+
   const { id: projectId } = useParams();
 
   useEffect(() => {
     const projectObj = getProject(projectId);
     setProject(projectObj);
-
-    // request.get('http://www.whatever.com/my.csv', function (error, response, body) {
-    //   if (!error && response.statusCode == 200) {
-    //       var csv = body;
-    //       // Continue with your processing here.
-    //   }
-    // });
-
-    // https.get(projectObj.markdown, (res) => {
-    //   console.log(res);
-    // })
-
 
     fetch(projectObj.markdown)
     .then((res) => res.text())
@@ -49,9 +38,9 @@ const ProjectPage = () => {
 
 
       <div className="project-content">
-        <div className="project-page-gallery">
+        {/* <div className="project-page-gallery">
           <h2>Technologies</h2>
-        </div>
+        </div> */}
         <h2>Description</h2>
         <ReactMarkdown children={content} rehypePlugins={[rehypeRaw, rehypeHighlight]} remarkPlugins={[remarkGfm]} className="markdown"/>
       </div>

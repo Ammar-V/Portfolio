@@ -13,6 +13,7 @@ function App() {
     <Router>
       <ScrollToTop />
       <div className="App">
+        <Resume />
         <Navbar />
         <div className="content">
           <Routes>
@@ -27,7 +28,6 @@ function App() {
           </Routes>
         </div>
         <Footer />
-        <Resume />
       </div>
     </Router>
   );

@@ -109,7 +109,7 @@ header {
   /* margin: 0 5%; */
   padding-top: 40px;
 
-  border-bottom: 1px solid #000;
+  /* border-bottom: 1px solid #000; */
   
 }
 
@@ -294,7 +294,7 @@ header {
 
 */
 
-#resume {
+#resume-button {
   min-width: 50px;
   min-height: 50px;
 
@@ -316,7 +316,7 @@ header {
   transition: transform .25s, filter 0.5s ease-in-out;
 }
 
-#resume img {
+#resume-button img {
   width: 100%;
   height: auto;
   
@@ -334,12 +334,49 @@ header {
   }
 }
 
-#resume:hover {
+#resume-button:hover {
   /* transform: scale(1.1); */
   border-radius: 50%;
   border: 1px solid lightslategray;
   padding: 19px;
   background-color: #FFF;
+}
+
+#pdf-container {
+  pointer-events: none; /* Click underneath other elements */
+
+  position: fixed;
+  margin: auto;
+  z-index: 1;
+
+  min-height: 100vh;
+  min-width: 100vw;
+  margin: auto;
+
+
+  display: flex;
+  position: fixed; 
+  z-index: 1; 
+  
+  /* filter: blur(5px); */
+
+}
+
+#pdf-viewer {
+  pointer-events: all;
+
+  opacity: 98%;
+  border: 1px solid lightslategray;
+  overflow-x: hidden;
+  overflow-y: scroll;
+
+  max-height: 80vh; 
+  max-width: 80vw;
+
+  min-height: 80vh; 
+  min-width: 80vw;
+
+  margin: auto;
 }
 
 

@@ -15,18 +15,18 @@ function App() {
       <div className="App">
         <Resume />
         <Navbar />
-        <div className="content">
           <Routes>
               <Route path="/" element={
                 <>
                   <Home />
-                  <About />
-                  <Experience />
+                  <div className="content">
+                    <About />
+                    <Experience />
+                  </div>
                 </>
               } />
               <Route path="/projects/:id" element={ <ProjectPage /> } />
           </Routes>
-        </div>
         <Footer />
       </div>
     </Router>

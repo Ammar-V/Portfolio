@@ -8,28 +8,34 @@ const About = () => {
         <div className="about-description">
 
           <p>
-            This is a bunch of Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate debitis quibusdam excepturi hic eum? Nemo quidem deserunt dolorum id, modi, nostrum ratione temporibus ab ex optio voluptatem quo facere corporis? Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ipsum recusandae iure nostrum dolorum. Sapiente maxime commodi omnis alias saepe perspiciatis, atque, accusamus aut, eaque praesentium corrupti ea aliquam cum neque?Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui voluptatibus tempore ab repellat, voluptatem eaque dolor sequi natus nobis quisquam alias omnis placeat expedita doloremque excepturi quam soluta? Quos, amet.
+            Hey 👋 my name is Ammar! My passion for building things drives my interest in computers, software, and machine learning.
+            <br />
+            <br />
+            As a Computer Engineering student at the University of Toronto, I seek to combine my determination to solve complex problems with my curiosity about how and why things work. Whether it is building an autonomous rover, working on the perception system of a self-driving car, or using computer vision to solve complex medical tasks, I'm always interested in learning about how I can apply my knowledge to practical issues around me. Through my work, I have come to understand the principles of engineering design, teamwork, and above all, the importance of creating a system for feedback.
+            <br />
+            <br />
+            If you want to learn more about my experiences, discuss potential collaborations, or just want to chat about things related to ML and robotics, feel free to contact me!
           </p>
           {
           /*
             Add tiles for the skills sections and education 
           */
           }
-          <div className="education">
+          {/* <div className="education">
             <h3>Education</h3>
             University of Toronto - Bachelor's in Applied Science and Engineering: <br />
             Computer Engineering
-          </div>
+          </div> */}
         
-          <div className="skills">
+          {/* <div className="skills">
             <h3>Skills</h3>
             <ul>
-              <li>Python, C++, Java, Node.js</li>
+              <li>Python, C/C++, Java, Node.js</li>
               <li>Machine Learning</li>
               <li>Backend Development</li>
               <li>Assembly</li>
             </ul>
-          </div>
+          </div> */}
         
           <h4>Want a more compact version of my experience? Check out my Resume.</h4>
         </div>

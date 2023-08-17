@@ -76,7 +76,7 @@ header {
 
 
 #homepage {
-  background-color: #FFF;
+  /* background-color: #FFF; */
 
   margin: 0 auto;
 
@@ -90,7 +90,7 @@ header {
 
   text-align: center;
 
-  border-bottom: 1px solid #000;
+  border-bottom: 1px solid lightslategray;
 }
 
 #homepage h1 {
@@ -114,7 +114,7 @@ header {
 }
 
 .section h2 {
-  font-size: 30px;
+  font-size: 40px;
   padding: 0 5%;
 }
 
@@ -132,15 +132,19 @@ header {
   justify-self: baseline;
 }
 
+.about-content p {
+  font-size: larger;
+}
+
 .profile-picture {
-  width: 30%;
+  width: 40%;
   height: auto;
   border-radius: 50%;
 
   align-self: center;
   justify-self: right;
 
-  margin-right: 10%;
+  margin: auto;
 
 }
 

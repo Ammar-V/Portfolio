@@ -28,6 +28,12 @@ body {
 
 }
 
+/*
+
+  HEADER
+
+*/
+
 header {
 
   margin: 0 auto;
@@ -73,6 +79,25 @@ header {
 .navbar .links {
   margin-left: auto;
 }
+
+/*
+
+  DYNAMIC HEADER
+
+*/
+
+
+@media screen and (max-width: 1000px) {
+
+  header {
+    padding: 0 10px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  /*  hamburger menu */
+}
+
 
 
 #homepage {
@@ -128,11 +153,17 @@ header {
   
 }
 
+
+/*
+
+ABOUT
+
+*/
 .section h2 {
   font-size: 40px;
   padding: 0 5%;
 }
-
+  
 .about-content {
   display: flex;
   justify-content: space-between;
@@ -162,6 +193,46 @@ header {
   margin: auto;
 
 }
+
+/*
+
+  DYNAMIC ABOUT
+
+*/
+
+@media screen and (max-width: 1000px) {
+  .about-content {
+    flex-direction: column;
+  }
+
+  .about-description {
+    max-width: 100%;
+    text-align: justify;
+  }
+
+  .profile-picture {
+    justify-self: center;
+    width: 60%;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .section h2 {
+    padding: 0;
+    text-align: center;
+  }
+
+  .profile-picture {
+    justify-self: center;
+    width: 90%;
+  }
+}
+
+/*
+
+  EXPERIENCE
+
+*/
 
 .project-gallery {
   display: flex;
@@ -213,6 +284,22 @@ header {
   font-size: 20px;
 }
 
+/*
+
+  DYNAMIC EXPERIENCE
+
+*/
+
+@media screen and (max-width: 900px) {
+
+}
+
+/*
+
+  PROJECT
+
+*/
+
 .project-intro-img {
   background-repeat: no-repeat;
   background-position: center;
@@ -239,7 +326,7 @@ header {
   justify-content: center;
   
   min-height: 70vh;
-  margin: 0 -10vw;
+  /* margin: 0 -10vw; */
   
   padding-top: 8vh;
 
@@ -306,6 +393,17 @@ header {
   border-radius: 2px;
 } */
 
+/*
+
+  DYNAMIC PROJECT
+
+*/
+@media screen and (max-width: 800px) {
+
+}
+
+
+
 
 /*
 
@@ -321,7 +419,7 @@ header {
   max-height: 50px;
 
   margin: auto 30px 30px auto;
-  padding: 20px;
+  padding: 0 20px 20px 0;
 
   position: -webkit-sticky;
   position: fixed;
@@ -398,7 +496,7 @@ header {
   max-height: 80vh; 
   max-width: 80vw;
 
-  min-height: 80vh; 
+  /* min-height: 80vh;  */
   min-width: 80vw;
 
   margin: auto;

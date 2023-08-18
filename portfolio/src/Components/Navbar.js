@@ -4,6 +4,9 @@ import { Link } from 'react-router-dom'
 const Navbar = () => {
 
   const [opacity, setOpacity] = useState(0.5);
+  const [width, setWidth] = useState(0);
+
+  const threshold = 600;
 
   useEffect(() => {
     if (typeof window !== "undefined") {
@@ -14,6 +17,11 @@ const Navbar = () => {
         setOpacity(newOpacity);
       }
       );
+
+      window.addEventListener('resize', () => {
+        setWidth(window.innerWidth);
+      })
+      
     }
   }, []);
 
@@ -24,12 +32,23 @@ const Navbar = () => {
           <Link to='/'>
             <h1>Ammar Vora</h1>
           </Link>
-          <div className="links">
-            <a href={`${window.location.origin}#about`}>About</a>
-            <Link to="/" relative="">Experience</Link>
-            <Link to="/contact">Contact</Link>
-            {/* <Link to="/resume">Resume</Link> */}
-          </div>
+          {
+            width > threshold &&
+            
+            <div className="links">
+              <a href={`${window.location.origin}#about`}>About</a>
+              <Link to="/" relative="">Experience</Link>
+              <Link to="/contact">Contact</Link>
+              {/* <Link to="/resume">Resume</Link> */}
+            </div>
+          }
+
+          {
+            width <= threshold &&
+            <div className="links">
+              <a href='/'>☰</a>
+            </div>
+          }
         </nav>
     </header>
     

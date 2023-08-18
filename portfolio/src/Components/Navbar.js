@@ -1,8 +1,25 @@
+import { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom'
 
 const Navbar = () => {
+
+  const [opacity, setOpacity] = useState(0.5);
+
+  useEffect(() => {
+    if (typeof window !== "undefined") {
+      window.addEventListener("scroll", () => {
+        let newOpacity = window.scrollY / 600;
+        newOpacity = Math.min(0.95, newOpacity);
+        
+        setOpacity(newOpacity);
+      }
+      );
+    }
+  }, []);
+
+
   return ( 
-    <header>
+    <header style={ {backgroundColor: `rgba(242, 242, 242, ${opacity})`} }>
       <nav className="navbar">
           <Link to='/'>
             <h1>Ammar Vora</h1>

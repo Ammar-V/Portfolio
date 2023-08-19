@@ -24,19 +24,20 @@ const Navbar = () => {
 
       window.addEventListener('resize', () => {
         setWidth(window.innerWidth);
-      })
+      });
+
+      window.addEventListener('click', (e) => {
+        if (e.target.id === 'hamburger' ) return;
+        if (hamburger === true) setHamburger(false);
+      });
       
     }
-  }, [hamburger]);
 
-  useEffect(() => {
     let newOpacity =  window.scrollY / 600;
     newOpacity = Math.min(0.95, newOpacity);
     
     if (hamburger) newOpacity = 0.95;
     setOpacity(newOpacity);
-
-
   }, [hamburger]);
 
 
@@ -52,14 +53,14 @@ const Navbar = () => {
           <div className="links">
             <Link to="/about">About</Link>
             <Link to="/experience">Experience</Link>
-            <Link to="/contact">Contact</Link>
+            <a href="#footer">Contact</a>
           </div>
         }
 
         {
           width <= threshold &&
-          <div className="hamburger">
-            <p onClick={ () => setHamburger(!hamburger) }>{!hamburger ? '☰' : '✖'}</p>
+          <div>
+            <p id="hamburger" onClick={ () => setHamburger(!hamburger) }>{!hamburger ? '☰' : '✖'}</p>
           </div>
         }
       </nav>
@@ -69,7 +70,7 @@ const Navbar = () => {
           <div className="links" style={ {backgroundColor: `rgba(242, 242, 242, ${opacity})`} }>
             <Link to="/about">About</Link>
             <Link to="/experience">Experience</Link>
-            <Link to="/contact">Contact</Link>
+            <a href="#footer">Contact</a>
           </div>
         }
     </header>

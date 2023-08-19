@@ -16,6 +16,16 @@ function App() {
         <Resume />
         <Navbar />
           <Routes>
+              <Route path="/:section" element={
+                <>
+                  <Home />
+                  <div className="content">
+                    <About />
+                    <Experience />
+                  </div>
+                </>
+              } />
+
               <Route path="/" element={
                 <>
                   <Home />

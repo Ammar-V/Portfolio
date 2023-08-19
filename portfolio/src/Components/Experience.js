@@ -3,8 +3,19 @@ import ProjectTile from "./ProjectTile";
 import { projectDescriptions } from "../middleware/project-content";
 
 import { useEffect, useState } from "react";
+import { useParams } from 'react-router-dom';
 
 const Experience = () => {
+
+  const { section } = useParams();
+
+  useEffect(() => {
+    if (section === 'experience') {
+      const homeElem = document.getElementById('experience');
+      homeElem.scrollIntoView();
+    }
+
+  }, [section]);
 
   const [projects, setProjects] = useState([]);
 

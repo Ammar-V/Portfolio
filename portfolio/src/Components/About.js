@@ -1,9 +1,23 @@
 import me from "../pics/me.jpg"
+import { useEffect } from 'react';
+import { useParams } from 'react-router-dom';
 
 const About = () => {
+
+  const { section } = useParams();
+
+  useEffect(() => {
+    if (section === 'about') {
+      const homeElem = document.getElementById('about');
+      homeElem.scrollIntoView();
+    }
+
+  }, [section]);
+
   return ( 
     <div id="about" className="section">
-      <h2>About me - Who am I?</h2>
+      {/* <a id="about-click" href="../#about" alt={"about click"} style={{display: 'none'}}>_</a> */}
+      <h2>Who am I?</h2>
       <div className="about-content">
         <div className="about-description">
 

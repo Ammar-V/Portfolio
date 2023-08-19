@@ -41,26 +41,25 @@ const Navbar = () => {
 
 
   return ( 
-    <header style={ {backgroundColor: `rgba(242, 242, 242, ${opacity})`} }>
+    <header id="header" style={ {backgroundColor: `rgba(242, 242, 242, ${opacity})`} }>
       <nav className="navbar">
-        <Link to='/'>
+        <Link to='/home'>
           <h1>Ammar Vora</h1>
         </Link>
         {
           width > threshold &&
           
           <div className="links">
-            <a href={`${window.location.origin}#about`}>About</a>
-            <Link to="/" relative="">Experience</Link>
+            <Link to="/about">About</Link>
+            <Link to="/experience">Experience</Link>
             <Link to="/contact">Contact</Link>
-            {/* <Link to="/resume">Resume</Link> */}
           </div>
         }
 
         {
           width <= threshold &&
           <div className="hamburger">
-            <p onClick={ () => setHamburger(!hamburger) }>☰</p>
+            <p onClick={ () => setHamburger(!hamburger) }>{!hamburger ? '☰' : '✖'}</p>
           </div>
         }
       </nav>
@@ -68,10 +67,9 @@ const Navbar = () => {
           width <= threshold && hamburger &&
 
           <div className="links" style={ {backgroundColor: `rgba(242, 242, 242, ${opacity})`} }>
-            <a href={`${window.location.origin}#about`}>About</a>
-            <Link to="/" relative="">Experience</Link>
+            <Link to="/about">About</Link>
+            <Link to="/experience">Experience</Link>
             <Link to="/contact">Contact</Link>
-            {/* <Link to="/resume">Resume</Link> */}
           </div>
         }
     </header>

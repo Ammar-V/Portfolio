@@ -597,7 +597,11 @@ ABOUT
 
 .footer-content {
   text-align: center;
-  padding-top: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  height: 30vh;
 }
 
 .footer-content h2 {
@@ -638,3 +642,22 @@ ABOUT
   min-width: 100vw;
   border-top:1px solid lightgray;
 }
+
+/*
+
+  DYNAMIC FOOTER
+
+*/
+@media screen and (max-width: 500px) {
+  .footer-content {
+    margin: auto;
+  }
+  .footer-content h2 {
+    padding: 0 10px;
+    font-size: 30px;
+  }
+  .contact-item {
+    max-width: 40px;
+  }
+}
+

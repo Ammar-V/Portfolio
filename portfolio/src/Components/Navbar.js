@@ -27,7 +27,7 @@ const Navbar = () => {
       });
 
       window.addEventListener('click', (e) => {
-        if (e.target.id === 'hamburger' ) return;
+        if (e.target.id === 'hamburger' || e.target.className === 'navbar') return;
         if (hamburger === true) setHamburger(false);
       });
       
@@ -43,7 +43,7 @@ const Navbar = () => {
 
   return ( 
     <header id="header" style={ {backgroundColor: `rgba(242, 242, 242, ${opacity})`} }>
-      <nav className="navbar">
+      <nav className="navbar" onClick={ () => { return width > threshold ? null :setHamburger(!hamburger) } }>
         <Link to='/home'>
           <h1>Ammar Vora</h1>
         </Link>

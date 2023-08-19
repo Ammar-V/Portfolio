@@ -85,6 +85,36 @@ header {
   DYNAMIC HEADER
 
 */
+@media screen and (max-width: 600px) {
+  header {
+    padding: 0 10px;
+    /* height: 20vh; */
+  }
+  .navbar {
+    padding-right: 20px;
+  }
+  .navbar a {
+    margin-right: auto;
+  }
+
+  .links {
+    font-size: 25px;
+    padding-bottom: 10px;
+    margin: 0 -10px;
+
+    display: flex;
+    flex-direction: column;
+
+    position: absolute;
+    width: 100vw;
+  }
+  .links a {
+    color: lightslategray;
+    text-decoration: none;
+    padding: 5px 30px;
+  }
+
+}
 
 
 @media screen and (max-width: 1000px) {
@@ -436,6 +466,10 @@ ABOUT
 
   .markdown h2 {
     font-size: 20px;
+  }
+
+  .markdown ul, ol {
+    margin-left: -15px;
   }
 }
 

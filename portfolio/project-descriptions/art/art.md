@@ -14,7 +14,8 @@ My involvement with the ART team was as follows:
 
 A ZED Stereo Camera is mounted on the rover, serving as the eyes of the rover. The CV pipeline is required to perform 2 main tasks: pothole detection and lane line segmentation. Once the objects are detected in a 2D image, they are then projected into 3D space using a depth matrix (more on this later). Once projected, the object/lane coordinates are passed downstream into the SLAM package as obstacles, allowing the rover to navigate around them.
 
-The entire pipeline is as follows:\
+The entire pipeline is as follows:
+
 ![CV Pipeline Overview](https://raw.githubusercontent.com/Ammar-V/Portfolio/new/portfolio/project-descriptions/art/pipeline_overview.png)
 
 
@@ -28,6 +29,7 @@ The purpose of using a deep learning approach to find lane-markings is to make a
 Typically, U-Net has a low inference speed (< 20 FPS) due to its large amount of Convolutional Neural Networks and network depth. To make our implementation faster and achieve > 60 FPS, we reduced the depth such that there are only 256 channels in the latent vector. Furthermore, the input image to the model includes 4 channels: grayscale, edges, and inverse edges, and gradients. The edges are found using a Canny edge detector. A Sobel filter is applied to the grayscale image and is used to calculate the gradient channel.
 
 Here's an example of what the input/output of our model looks like:
+
 ![Inputs/Outputs of the Lane Detection pipeline](https://raw.githubusercontent.com/Ammar-V/Portfolio/new/portfolio/project-descriptions/art/lane_det_pipeline.png)
 
 

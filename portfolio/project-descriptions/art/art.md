@@ -14,7 +14,7 @@ My involvement with the ART team was as follows:
 
 A ZED Stereo Camera is mounted on the rover, serving as the eyes of the rover. The CV pipeline is required to perform 2 main tasks: pothole detection and lane line segmentation. Once the objects are detected in a 2D image, they are then projected into 3D space using a depth matrix (more on this later). Once projected, the object/lane coordinates are passed downstream into the SLAM package as obstacles, allowing the rover to navigate around them.
 
-The entire pipeline is as follows:
+The entire pipeline is as follows:\
 ![CV Pipeline Overview](https://raw.githubusercontent.com/Ammar-V/Portfolio/new/portfolio/project-descriptions/art/pipeline_overview.png)
 
 

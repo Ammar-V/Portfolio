@@ -27,7 +27,8 @@ import freegearBlurImg from "../pics/freegear_blur.png";
   Import markdown files
 */
 
-const projectDescriptions = [{
+const projectDescriptions = [
+{
   id: 'art',
   title: "Autonomous Rover Team",
   img: artImg,
@@ -74,7 +75,7 @@ const projectDescriptions = [{
   img: freegearImg,
   blurImg: freegearBlurImg,
   altText: "A 90s style racing game that runs on an FPGA",
-  markdown: "https://raw.githubusercontent.com/Ammar-V/FreegearOnFPGA/main/README.md?token=GHSAT0AAAAAACC4MUCVBZKA3E23W3BXQER2ZGZLHMA"
+  markdown: "https://raw.githubusercontent.com/Ammar-V/FreegearOnFPGA/main/README.md"
 },
 {
   id: 'barrels',

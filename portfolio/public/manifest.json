@@ -3,17 +3,12 @@
   "name": "Ammar Vora's Portfolio",
   "icons": [
     {
-      "src": "favicon",
+      "src": "logo_ammar",
       "sizes": "64x64 32x32 24x24 16x16",
       "type": "image/x-icon"
     },
     {
-      "src": "test_logo.png",
-      "type": "image/png",
-      "sizes": "494x494"
-    },
-    {
-      "src": "logo512.png",
+      "src": "logo_ammar",
       "type": "image/png",
       "sizes": "512x512"
     }

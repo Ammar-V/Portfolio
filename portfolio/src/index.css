@@ -418,8 +418,6 @@ ABOUT
 
   margin: auto;
   /* padding: 10vh 0; */
-  line-height: 20px;
-
 }
 
 .project-content h2 {
@@ -430,11 +428,15 @@ ABOUT
   max-height: auto;
   max-width: 100%;
 }
+.markdown {
+  line-height: 35px;  
+}
 
 .markdown h1 {
   font-size: 30px;
   padding-bottom: 5px;
   border-bottom: 1px solid lightgray;
+
 }
 
 .markdown h2 {

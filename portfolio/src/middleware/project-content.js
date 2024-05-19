@@ -2,6 +2,7 @@
   Import images
 */
 
+import birdImg from "../pics/birds.gif";
 import artImg from "../pics/art.png";
 import mapperImg from "../pics/mapper.png";
 import autorontoImg from "../pics/autoronto.png";
@@ -10,7 +11,7 @@ import invoiceImg from "../pics/invoice.png";
 import potholeImg from "../pics/pothole.png";
 import commentImg from "../pics/comment.png";
 import rescueImg from "../pics/rescue.png";
-import freegearImg from "../pics/freegear.png";
+import freegearImg from "../pics/freegear.gif";
 
 /*
   Import markdown files
@@ -18,6 +19,13 @@ import freegearImg from "../pics/freegear.png";
 
 const projectDescriptions = [
 {
+  id: 'birds',
+  title: "Generative Birds",
+  img: birdImg,
+  altText: "Animating birds in images using GANs",
+  markdown: "https://raw.githubusercontent.com/Ammar-V/Portfolio/new/portfolio/project-descriptions/birds/birds.md"
+},
+  {
   id: 'art',
   title: "Autonomous Rover Team",
   img: artImg,

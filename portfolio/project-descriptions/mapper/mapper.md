@@ -1,1 +1,1 @@
-# Stay tuned to learn about how I used C++ to create a super-fast mapping software
+# Stay tuned to learn about how I used C++ to create a superfast mapping software

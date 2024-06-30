@@ -81,10 +81,10 @@ An important note is that our `x` and `y` values are still in pixel coordinates,
 
 This conversion from pixels to meters uses the camera intrinsics of focal length, represented by `fx` and `fy`, and the optical center, represented by `cx` and `cy`. Then, all the points are put through the following transformation:
 
-<code>
+```
 X = (x - cx) * z / fx
 Y = (y - cy) * z / fy
-<code/>
+```
 
 Converting this 1D array of `(X, Y, z)` coordinates allows us to package our obstacles as a valid `PointCloud2` message.
 
@@ -97,7 +97,7 @@ The final step in converting our 2D objects into a 3D format that is interpretab
 
 The algorithm used to convert our obstacles from `PointCloud2` to `LaserScan` by simulating a 2D LiDAR sensor as follows:
 
-<code>
+```
 pcl := [(x1, y1, z1), ..., (xN, yN, zN)] # in meters
 polar_points := []
 
@@ -116,7 +116,7 @@ for pt in polar_points:
   laser_scan[b] := min(laser_scan[b], pt.r) # Keep the point that is closer to the origin
 
 return laser_scan
-<code/>
+```
 
 As a result, the `PointCloud2` message is converted into a valid `LaserScan`, that can be passed downstream to the SLAM package.
 

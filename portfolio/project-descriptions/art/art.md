@@ -56,7 +56,7 @@ This model was selected for its ability to bound objects with high accuracy in a
 
 After training, the YOLOv4 model achieved 92% accuracy on a test set. Example detections are as follows:
 
-![Results of YOLOv4 on potholes detection](potholes.gif)
+![Results of YOLOv4 on potholes detection](https://github.com/Ammar-V/Portfolio/blob/new/portfolio/project-descriptions/art/potholes.gif?raw=true)
 
 
 ## Integration via the Robot Operating System (ROS)
@@ -73,7 +73,7 @@ To project 2D detections into 3D detections used by the rover's mapping and navi
 
 To perform the projection into 3D, the first step is to use a depth map to extract the distance from the camera to each pixel that lies on the object (represented by a 1 in the binary mask). In doing so, you can convert the obstacles from a dense 2D representation into a 1D sparse representation in the following format: `[(x1, y1, z1), ..., (xN, yN, zN)]`, where `x` and `y` are the location of a pixel on the object and `z` is the corresponding distance in the pixel frame.
 
-![A visualization of pixel coordinates and the camera frame](camera_frame.png)
+![A visualization of pixel coordinates and the camera frame](https://github.com/Ammar-V/Portfolio/blob/new/portfolio/project-descriptions/art/camera_frame.png?raw=true)
 
 Now that we have a sparse representation of the obstacles in the scene (sparse because we are only keeping track of pixels that represent a lane or a pothole, and discarding the rest), we are one step closer to our output of a `PointCloud2` object.
 
@@ -92,7 +92,7 @@ Converting this 1D array of `(X, Y, z)` coordinates allows us to package our obs
 
 The final step in converting our 2D objects into a 3D format that is interpretable by the rover's mapping and navigational system. Our system using the a SLAM package called Cartographer, which takes in a `LaserScan` message as input. A `LaserScan` message is a representation that is commonly used by 2D LiDAR sensors. In a `LaserScan`, each point is represented in polar coordinates, where the origin somewhere on the robot.
 
-![Cartesian coordinates to Polar coordinates](polar_coordinates.png)
+![Cartesian coordinates to Polar coordinates](https://github.com/Ammar-V/Portfolio/blob/new/portfolio/project-descriptions/art/polar_coordinates.png?raw=true)
 
 The algorithm used to convert our obstacles from `PointCloud2` to `LaserScan` by simulating a 2D LiDAR sensor as follows:
 ```
@@ -125,10 +125,10 @@ Example output: \
 
 A `PointCloud2` representation:
 
-![A PointCloud2 representation of the obstacles](lane_pcl.png)
+![A PointCloud2 representation of the obstacles](https://github.com/Ammar-V/Portfolio/blob/new/portfolio/project-descriptions/art/lane_pcl.png?raw=true)
 
 The corresponding `LaserScan` representation:
 
-![A LaserScan representation of the obstacles](lane_laser.png)
+![A LaserScan representation of the obstacles](https://github.com/Ammar-V/Portfolio/blob/new/portfolio/project-descriptions/art/lane_laser.png?raw=true)
 
 

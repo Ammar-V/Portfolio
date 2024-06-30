@@ -80,6 +80,7 @@ Now that we have a sparse representation of the obstacles in the scene (sparse b
 An important note is that our `x` and `y` values are still in pixel coordinates, which the rover cannot interpret while navigating in the real 3D world. Therefore, the next step in this projection is to convert our objects from the `pixel_frame` to a `camera_frame`, ie. converting from pixel coordinates to real world coordinates.
 
 This conversion from pixels to meters uses the camera intrinsics of focal length, represented by `fx` and `fy`, and the optical center, represented by `cx` and `cy`. Then, all the points are put through the following transformation:
+
 <code>
 X = (x - cx) * z / fx
 Y = (y - cy) * z / fy
@@ -95,11 +96,12 @@ The final step in converting our 2D objects into a 3D format that is interpretab
 ![Cartesian coordinates to Polar coordinates](https://github.com/Ammar-V/Portfolio/blob/new/portfolio/project-descriptions/art/polar_coordinates.png?raw=true)
 
 The algorithm used to convert our obstacles from `PointCloud2` to `LaserScan` by simulating a 2D LiDAR sensor as follows:
+
 <code>
 pcl := [(x1, y1, z1), ..., (xN, yN, zN)] # in meters
 polar_points := []
 
-# Convert from cartesian to polar coordinates
+// Convert from cartesian to polar coordinates
 for (x, y, z) in pcl:
   r, theta := cartesian_to_polar(point)
   polar_points += (r, theta)
@@ -108,13 +110,12 @@ polar_points.sort() # sorted by theta
 
 laser_scan := [(), ..., ()] # An array B empty "buckets", where the number of buckets B = (max_angle - min_angle) / angle_increment, basedo on the simulated LiDAR parameters
 
-# Find the closest point in each "bucket"
+// Find the closest point in each "bucket"
 for pt in polar_points:
   b := index of bucket that pt belongs to, based on its theta
   laser_scan[b] := min(laser_scan[b], pt.r) # Keep the point that is closer to the origin
 
 return laser_scan
-
 <code/>
 
 As a result, the `PointCloud2` message is converted into a valid `LaserScan`, that can be passed downstream to the SLAM package.

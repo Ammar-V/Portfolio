@@ -108,7 +108,7 @@ for (x, y, z) in pcl:
 
 polar_points.sort() # sorted by theta
 
-laser_scan := [(), ..., ()] # An array B empty "buckets", where the number of buckets B = (max_angle - min_angle) / angle_increment, basedo on the simulated LiDAR parameters
+laser_scan := [(), ..., ()] // An array B empty "buckets", where the number of buckets B = (max_angle - min_angle) / angle_increment, basedo on the simulated LiDAR parameters
 
 // Find the closest point in each "bucket"
 for pt in polar_points:

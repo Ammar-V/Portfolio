@@ -443,16 +443,18 @@ ABOUT
   font-size: 20px;
 }
 
-/* .markdown pre {
+.markdown pre {
   background-color: #f6f8fa;
   padding: 15px;
+  line-height: 20px;
+  text-wrap: wrap;
 }
 
 .markdown code {
   background-color: #f6f8fa;
   padding: 2px;
   border-radius: 2px;
-} */
+}
 
 /*
 

@@ -3,7 +3,6 @@ import ReactMarkdown from "react-markdown";
 import rehypeRaw from 'rehype-raw';
 import remarkGfm from 'remark-gfm'
 import rehypeHighlight from 'rehype-highlight'
-import CodeBlock from "./CodeBlock";
 
 import { useParams } from 'react-router-dom';
 
@@ -43,7 +42,7 @@ const ProjectPage = () => {
           <h2>Technologies</h2>
         </div> */}
         <h2>Description</h2>
-        <ReactMarkdown children={content} renderers={{ code: CodeBlock }} rehypePlugins={[rehypeRaw, rehypeHighlight]} remarkPlugins={[remarkGfm]} className="markdown"/>
+        <ReactMarkdown children={content} rehypePlugins={[rehypeRaw, rehypeHighlight]} remarkPlugins={[remarkGfm]} className="markdown"/>
       </div>
     </div>
 

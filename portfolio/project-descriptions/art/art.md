@@ -37,7 +37,7 @@ The hyperparameters (channels, image size, model depth), were thoroughly tuned t
 
 The model was trained on a dataset of 5442 images of real-world daytime and nighttime dashcam images, as well as 532 images collected from a previous competition. Approximately 60% of the dataset is composed of synthetic road data. In testing the model, we achieved 97% accuracy (as measured by the IOU) on normal roads and 75% on grass.
 
-### Implementation Details
+**Implementation Details**
 
 Implementing the entire U-Net pipeline in PyTorch was an amazing learning experience, where I implemented a custom PyTorch data class, a train loop, alongside with saving checkpoints of the model, and outputting metrics.
 
@@ -52,14 +52,14 @@ Potholes, in this competition, are outlined as flat white circles on the ground 
 
 This model was selected for its ability to bound objects with high accuracy in a single pass. This makes the YOLO model faster than other object detection algorithms, such as R-CNN, which use multiple stages. YOLO does not utilize a sliding window approach, which allows features to be extracted in context of their backgrounds, thereby decreasing the number of false positives. The YOLO model can generalize to a variety of environments, which increases the robustness of the model.
 
-### Results
+**Results**
 
 After training, the YOLOv4 model achieved 92% accuracy on a test set. Example detections are as follows:
 
 ![Results of YOLOv4 on potholes detection](https://github.com/Ammar-V/Portfolio/blob/new/portfolio/project-descriptions/art/potholes.gif?raw=true)
 
 
-## Integration via the Robot Operating System (ROS)
+## Integration with Robot Operating System (ROS)
 
 For a rover to autonomously navigate through this obstacle course, the lane and potholes detections must be converted and communicate in a format that is interpretable by the rover's navigational system. To navigate from point A to point B in the real world, our robot uses a common technique to first generate a map of environment (represented by an occupancy grid), and then uses a path planning algorithm (for example, A*), to find a safe route without hitting any obstacles. Inputs to the mapping algorithm are required to be in real-world coordinates. As such, the 2D object detections are required to be converted into 3D objects.
 
@@ -75,7 +75,7 @@ To perform the projection into 3D, the first step is to use a depth map to extra
 
 ![A visualization of pixel coordinates and the camera frame](https://github.com/Ammar-V/Portfolio/blob/new/portfolio/project-descriptions/art/camera_frame.png?raw=true)
 
-Now that we have a sparse representation of the obstacles in the scene (sparse because we are only keeping track of pixels that represent a lane or a pothole, and discarding the rest), we are one step closer to our output of a `PointCloud2` object.
+Now that we have a sparse representation of the obstacles in the scene (sparse because we are only keeping track of pixels that represent a lane or a pothole, and discarding the rest), we are one step closer to our output of a `PointCloud2` message.
 
 An important note is that our `x` and `y` values are still in pixel coordinates, which the rover cannot interpret while navigating in the real 3D world. Therefore, the next step in this projection is to convert our objects from the `pixel_frame` to a `camera_frame`, ie. converting from pixel coordinates to real world coordinates.
 
@@ -86,7 +86,7 @@ X = (x - cx) * z / fx
 Y = (y - cy) * z / fy
 ```
 
-Converting this 1D array of `(X, Y, z)` coordinates allows us to package our obstacles as a valid `PointCloud2` message.
+Converting to this 1D array of `(X, Y, z)` coordinates allows us to package our obstacles as a valid `PointCloud2` message.
 
 
 ### Converting the `PointCloud2` message to a `LaserScan` message
@@ -106,9 +106,8 @@ for (x, y, z) in pcl:
   r, theta := cartesian_to_polar(point)
   polar_points += (r, theta)
 
-polar_points.sort() # sorted by theta
-
-laser_scan := [(), ..., ()] // An array B empty "buckets", where the number of buckets B = (max_angle - min_angle) / angle_increment, basedo on the simulated LiDAR parameters
+// An array of B "buckets", where the number of buckets B = (max_angle - min_angle) / angle_increment
+laser_scan := [(inf), ..., (inf)] 
 
 // Find the closest point in each "bucket"
 for pt in polar_points:

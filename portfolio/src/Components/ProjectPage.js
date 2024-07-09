@@ -8,7 +8,6 @@ import { useParams } from 'react-router-dom';
 
 import { getProject } from "../middleware/project-content";
 
-
 const ProjectPage = () => {
   const [project, setProject] = useState("");
   const [content, setContent] = useState("");

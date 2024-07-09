@@ -14,6 +14,7 @@ Simply put, a Geographical Information System (GIS) is a piece of software that 
 
 
 ## Overarching Takeaways
+___
 
 Although City Explorer is a course project, our team strove for excellence in every phase of development. I am proud of the level of organization we upheld in our codebase from day 1, allowing us to implement a highly smooth and user-friendly application. Writing City Explorer from scratch was an amazing experience as I learned to leverage various different libraries, optimization techniques, and code styles, that have been applicable in all of my projects outside this course. Below, I have highlighted some of which I find the most important.
 
@@ -34,11 +35,11 @@ As our team wanted to go beyond just a base implementation, we utilized external
 
 
 ## 1. Writing Efficient APIs
-
+___
 ### Modularity is a Friend
 
 ## 2. Putting GTK to Use: Building a Graphical User Interface (GUI)
-
+___
 ### Techniques to Render Swiftly
 
 #### Chunk Loading
@@ -50,7 +51,7 @@ As our team wanted to go beyond just a base implementation, we utilized external
 
 
 ## 3. Path Planning
-
+___
 ## 4. An NP-Hard Challenge: the Travelling Salesman Problem
-
+___
 

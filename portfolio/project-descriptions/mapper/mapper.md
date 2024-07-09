@@ -6,7 +6,7 @@ City Explorer is a Geographical Information System (GIS), developed as part of E
 
 *Built in collaboration with Shreya Jain and Cindy Wang.*
 
-![City Explorer: A Geographical Information System (GIS) build for ECE297.](thumbnail.png)
+![City Explorer: A Geographical Information System (GIS) build for ECE297.](https://github.com/Ammar-V/Portfolio/blob/new/portfolio/project-descriptions/mapper/thumbnail.png?raw=true)
 
 ### What makes City Explorer a Geographical Information System?
 

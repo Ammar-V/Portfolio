@@ -98,6 +98,20 @@ public:
 
 ## 2. Putting GTK to Use: Building a Graphical User Interface (GUI)
 ___
+
+*Accurate street width sizing, alongside with name and directional arrows*
+
+![Street names and directions on a mapper created in ECE297](streets.png)
+
+*Heatmap feature*
+
+![A heatmap as an extra feature for the mapper in ECE297](heatmap.png)
+
+*Heatmap feature with zoom optimization*
+
+![A zoomed heatmap as an extra feature for the mapper in ECE297](heatmap_zoom.png)
+
+
 ### Techniques to Render Swiftly
 
 #### Chunk Loading
@@ -110,6 +124,12 @@ ___
 
 ## 3. Path Planning
 ___
+
+*Navigation from point A to point B*
+
+![Navigation mode in a mapper created in ECE297](navigation.png)
+
+
 ## 4. An NP-Hard Challenge: the Travelling Salesman Problem
 ___
 

@@ -40,7 +40,7 @@ const ProjectPage = () => {
         {/* <div className="project-page-gallery">
           <h2>Technologies</h2>
         </div> */}
-        <h2>Description</h2>
+        {/* <h2>Description</h2> */}
         <ReactMarkdown children={content} rehypePlugins={[rehypeRaw, rehypeHighlight]} remarkPlugins={[remarkGfm]} className="markdown"/>
       </div>
     </div>

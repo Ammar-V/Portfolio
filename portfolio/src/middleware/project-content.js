@@ -41,18 +41,26 @@ const projectDescriptions = [
 
 },
 {
-  id: 'rescue-ranger',
-  title: "Rescue Ranger",
-  img: rescueImg,
-  altText: "Combining Computer Vision with robots to help with search and rescue",
-  markdown: "https://raw.githubusercontent.com/Ammar-V/Rescue-Ranger/master/README.md"
-},
-{
   id: 'city-explorer',
   title: "City Explorer",
   img: mapperImg,
   altText: "A mapping software made with C++",
   markdown: "https://raw.githubusercontent.com/Ammar-V/Portfolio/new/portfolio/project-descriptions/mapper/mapper.md"
+},
+{
+  id: 'barrels',
+  title: "Barrels",
+  img: barrelImg,
+  altText: "A classical approach to detecting barrels",
+  markdown: "https://raw.githubusercontent.com/Ammar-V/Barrels/main/README.md"
+  // markdown: barrelsDesc
+},
+{
+  id: 'rescue-ranger',
+  title: "Rescue Ranger",
+  img: rescueImg,
+  altText: "Combining Computer Vision with robots to help with search and rescue",
+  markdown: "https://raw.githubusercontent.com/Ammar-V/Rescue-Ranger/master/README.md"
 },
 {
   id: 'potholes',
@@ -67,14 +75,6 @@ const projectDescriptions = [
   img: freegearImg,
   altText: "A 90s style racing game that runs on an FPGA",
   markdown: "https://raw.githubusercontent.com/Ammar-V/FreegearOnFPGA/main/README.md"
-},
-{
-  id: 'barrels',
-  title: "Barrels",
-  img: barrelImg,
-  altText: "A classical approach to detecting barrels",
-  markdown: "https://raw.githubusercontent.com/Ammar-V/Barrels/main/README.md"
-  // markdown: barrelsDesc
 },
 {
   id: 'invoice-maker',

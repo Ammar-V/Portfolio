@@ -430,6 +430,7 @@ ABOUT
 }
 .markdown {
   line-height: 35px;  
+  margin: 10%;
 }
 
 .markdown h1 {
@@ -444,16 +445,25 @@ ABOUT
 }
 
 .markdown pre {
-  background-color: #f6f8fa;
+  background-color: #eeeeee;
   padding: 15px;
   line-height: 20px;
   text-wrap: wrap;
+  font-size: small;
+  max-width: 90%;
+  border-radius: 10px;
 }
 
+/* This is needed to remove extra padding created at the start of large code blocks "pre" because the padding from "code" is also applied to them. */
+.markdown pre code {
+  padding: 0;
+}
 .markdown code {
-  background-color: #f6f8fa;
-  padding: 2px;
-  border-radius: 2px;
+  background-color: #eeeeee;
+  padding: 2px 8px;
+  border-radius: 5px;
+  color: #cb2a01;
+  text-align: center;
 }
 
 /*
@@ -472,8 +482,16 @@ ABOUT
     font-size: 50px;
   }
 
+  .project-intro h3 {
+    margin: 0 5%;
+  }
+
   .project-content h2 {
     font-size: 35px;
+  }
+
+  .markdown {
+    margin: 10% 0;
   }
 
   .markdown h1 {

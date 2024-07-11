@@ -34,9 +34,67 @@ As our team wanted to go beyond just a base implementation, we utilized external
 ### Using GIT
 
 
+
 ## 1. Writing Efficient APIs
 ___
+
+The first part of creating City Explorer required us to create APIs that would actually interact with the raw geographical data provided the OpenStreetMap database, and make it available to our rendering algorithms (implemented later on). The database contained more than 30 cities, with some cities holding over 1 million street segments. Due to the scale of the database, rendering the map quickly requires having highly efficient APIs that can fetch data in an instant. Example data includes street segments, intersections, streets adjacent to a specific intersection, etc.
+
 ### Modularity is a Friend
+When writing our APIs, we were given a list of function that we had to implement. When implementing, we had a goal of abstracting away as much complexity as we could. Specifically, we wanted each API to be very minimal, where instead of writing its functionality in the API function itself, the API function would call another function stored elsewhere, hiding all the complexity. What this allowed us to do (and what boosted the performance of our application), was to package all the high efficiency data APIs in a singular C++ object, called `MapData`. On top of holding the actual implementation of the APIs, the `MapData` object also contained look up tables (implemented with STL hash maps and custom data structs) that would be used under the hood by our API calls. Upon initialization of a `MapData` object with a path to an OSM database of a city, the entire city's data was parsed into these custom look up tables. Then, the algorithms in the API calls would simply reference these look up tables, providing information at a lighting fast speed (`O(1)` complexity for most cases). 
+
+Most importantly, packaging up all our database loading in a singular object increased our code modularity, allowing us to load multiple maps at once and very easily swap between them in our GUI.
+
+**MapData Class**
+```
+class MapData {
+
+public:
+    int zoneWidth = 100;
+
+    // Used to check if map was loaded correctly
+    bool mapLoaded;
+    LocationInfo locationInfo;
+
+    // Maximum speed limit in city
+    double maxSpeed;
+
+    // Maps IntersectionIdx to all it's data
+    std::vector<IntersectionInfo> intersectionInfoTable;
+    // Maps StreetSegmentIdx to it's information Struct
+    std::vector<SegmentInfo> streetSegmentTable;
+    // Maps a street id to all it's intersections and street segments
+    StreetTable streetInfoTable;
+
+    ...
+
+    // Load the street segments
+    void loadStreetSegmentInfo();
+
+    // Maps a street id to all it's intersections and street segments
+    void loadStreetInfo ();
+
+    // Loads all the adjacent interesections to a specific intersection
+    std::vector<IntersectionIdx> loadFindAdjacentIntersections(IntersectionIdx intersection_id);
+
+    // Populates the Intersection Info Table
+    void loadIntersectionData ();
+
+    //populates feature info table
+    void loadFeatureInfoTable();
+
+    //fills the OSMID hash table
+    void fillOSMIDTable();
+
+    //fills the street segment vector
+    void loadStreetSegmentVector();
+
+    ...
+
+    MapData(); // Populate all private data strucutres
+    ~MapData(); // Clear all private data structures
+}
+```
 
 ## 2. Putting GTK to Use: Building a Graphical User Interface (GUI)
 ___

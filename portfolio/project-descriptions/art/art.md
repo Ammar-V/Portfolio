@@ -1,6 +1,6 @@
 # What is the Autonomous Rover Team (ART)?
 
-ART is a subteam under the [University of Toronto Robotics Association](https://www.utra.ca/) (UTRA). ART competes at the Intelligent Ground Vehicles Competition at Oakland University in Michigan, every year in June.
+ART is a subteam under the <a href="https://www.utra.ca/" target="_blank">University of Toronto Robotics Association</a> (UTRA). ART competes at the Intelligent Ground Vehicles Competition at Oakland University in Michigan, every year in June.
 
 ### My involvement with the ART team was as follows:
 - **September 2021 - June 2022:** Member of the CV subteam.

@@ -2,7 +2,7 @@
 
 # Perception Team at aUToronto
 
-The University of Toronto's Self-Driving Car Team, [aUToronto](https://www.autodrive.utoronto.ca/), is a student-led design team that competes every year at the GM/SAE AutoDrive Challenge Series. We are tasked with building a level 4 autonomous vehicle that can navigate through numerous static and dynamic challenges in an urban environment created at MCity, Michigan.
+The University of Toronto's Self-Driving Car Team, <a href="https://www.autodrive.utoronto.ca/" target="_blank">aUToronto</a>, is a student-led design team that competes every year at the GM/SAE AutoDrive Challenge Series. We are tasked with building a level 4 autonomous vehicle that can navigate through numerous static and dynamic challenges in an urban environment created at MCity, Michigan.
 
 ![Artemis: the self-driving car developed on by aUToronto](https://github.com/Ammar-V/Portfolio/blob/new/portfolio/project-descriptions/autoronto/highway.jpeg?raw=true)
 *Source: aUToronto*
@@ -31,10 +31,11 @@ At aUToronto, we work towards the following tasks:
 
 
 ## Lane Detection
+___
 
 When striving towards building a vehicle with level 4 autonomy, lane detection becomes one of the most crucial and fundamental problems to solve. Simply put, lane detection is an umbrella term for lane line segmentation and classification, which is the process of identifying where exactly the lane lines are in a driving scene and classifying what type of lane it is. 
 
-Lane detection is a heavily studied area of Computer Vision, and as such, there are vasts amounts [research papers](https://paperswithcode.com/task/lane-detection) outlining the different classical and deep learning approaches for it. Here are some examples of different lane detection methodologies:
+Lane detection is a heavily studied area of Computer Vision, and as such, there are vasts amounts <a href="https://paperswithcode.com/task/lane-detection" target="_blank">research papers</a> outlining the different classical and deep learning approaches for it. Here are some examples of different lane detection methodologies:
   - Pass an image into a deep neural network (for example, a Convolutional Neural Network), trained in a supervised fashion to output binary masks of lanes.
   - Classical approach involving a combination of the following:
     - Contour detection (Canny, Sobel, etc.)
@@ -68,6 +69,7 @@ The post-processing script can extract this information in real-time (>20 FPS), 
 <br></br>
 
 ## 3D Object Detection
+___
 
 In autonomous driving, 3D object detection (3DOD) is yet another fundamental task, because an autonomous system needs to be aware of all the obstacles surrounding it to be able successfully navigate around them.
 

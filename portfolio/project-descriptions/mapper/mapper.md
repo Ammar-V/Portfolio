@@ -6,7 +6,7 @@ City Explorer is a Geographical Information System (GIS), developed as part of E
 
 *Built in collaboration with Shreya Jain and Cindy Wang.*
 
-![City Explorer: A Geographical Information System (GIS) build for ECE297.](https://github.com/Ammar-V/Portfolio/blob/new/portfolio/project-descriptions/mapper/thumbnail.png?raw=true)\
+![City Explorer: A Geographical Information System (GIS) build for ECE297.](https://github.com/Ammar-V/Portfolio/blob/new/portfolio/project-descriptions/mapper/thumbnail.png?raw=true)
 
 ### What makes City Explorer a Geographical Information System?
 
@@ -109,7 +109,7 @@ ___
 *Heatmap feature with zoom optimization*
 <br></br>
 
-![A zoomed heatmap as an extra feature for the mapper in ECE297](https://github.com/Ammar-V/Portfolio/blob/new/portfolio/project-descriptions/mapper/heatmap_zoom.png?raw=true)\
+![A zoomed heatmap as an extra feature for the mapper in ECE297](https://github.com/Ammar-V/Portfolio/blob/new/portfolio/project-descriptions/mapper/heatmap_zoom.png?raw=true)
 
 
 ### Techniques to Render Swiftly
@@ -127,7 +127,7 @@ ___
 
 *Navigation from point A to point B*
 
-![Navigation mode in a mapper created in ECE297](https://github.com/Ammar-V/Portfolio/blob/new/portfolio/project-descriptions/mapper/navigation.png?raw=true)\
+![Navigation mode in a mapper created in ECE297](https://github.com/Ammar-V/Portfolio/blob/new/portfolio/project-descriptions/mapper/navigation.png?raw=true)
 
 
 ## 4. An NP-Hard Challenge: the Travelling Salesman Problem

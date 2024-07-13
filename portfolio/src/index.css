@@ -492,6 +492,8 @@ ABOUT
 
   .markdown {
     margin: 10% 0;
+    font-size: small;
+    line-height: 25px;
   }
 
   .markdown h1 {

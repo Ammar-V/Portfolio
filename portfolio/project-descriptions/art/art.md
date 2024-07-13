@@ -21,6 +21,7 @@ The entire pipeline is as follows:
 
 
 ## Lane Detection
+___
 
 Lane detection, specifically lane line segmentation, is a fundamental task which is performed by autonomous vehicles, and there are numerous methods that are outlined in literature suitable for this task. For our system, we developed a classical and deep learning approach, and I'll focus on our implementation of the deep learning approach.
 
@@ -47,6 +48,7 @@ For any pre-/post-processing of images, OpenCV was extensively used. For example
 
 
 ## Pothole Detection
+___
 
 Potholes, in this competition, are outlined as flat white circles on the ground with a 2ft diameter. Similar to lane detection, there are many different ways of performing pothole detection, such as classical approaches based on thresholding and edge detection, or deep learning approaches such as the You Only Look Once (YOLO) object detection model. In this case, the latter, specifically YOLOv4 tiny, was used by transfer learning on a custom dataset (more details on custom dataset [here](https://ammarvora.com/projects/potholes)).
 
@@ -60,6 +62,7 @@ After training, the YOLOv4 model achieved 92% accuracy on a test set. Example de
 
 
 ## Integration with Robot Operating System (ROS)
+___
 
 For a rover to autonomously navigate through this obstacle course, the lane and potholes detections must be converted and communicate in a format that is interpretable by the rover's navigational system. To navigate from point A to point B in the real world, our robot uses a common technique to first generate a map of environment (represented by an occupancy grid), and then uses a path planning algorithm (for example, A*), to find a safe route without hitting any obstacles. Inputs to the mapping algorithm are required to be in real-world coordinates. As such, the 2D object detections are required to be converted into 3D objects.
 

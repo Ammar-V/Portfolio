@@ -5,7 +5,7 @@
 The University of Toronto's Self-Driving Car Team, <a href="https://www.autodrive.utoronto.ca/" target="_blank">aUToronto</a>, is a student-led design team that competes every year at the GM/SAE AutoDrive Challenge Series. We are tasked with building a level 4 autonomous vehicle that can navigate through numerous static and dynamic challenges in an urban environment created at MCity, Michigan.
 
 ![Artemis: the self-driving car developed on by aUToronto](https://github.com/Ammar-V/Portfolio/blob/new/portfolio/project-descriptions/autoronto/highway.jpeg?raw=true)\
-*Artemis: the self-driving car we work on. Source: aUToronto*
+*Artemis: our self-driving car. Source: aUToronto*
 <br></br>
 
 #### What is Level 4 Autonomy?
@@ -61,11 +61,11 @@ To extract crucial information about lane lines from a driving scene, I wrote a 
 The post-processing script can extract this information in real-time (>20 FPS), thereby being a viable solution for lane line classification a level 4 autonomy vehicle, where the vehicle needs to use perception to make quick and precise decisions in a dynamic environment. Once this information is extracted, it is passed downstream through ROS2 messages to other parts of the autonomy stack such as mapping and navigation.
 
 ![Post-processing binary masks of lanes, for lane line classification](https://github.com/Ammar-V/Portfolio/blob/new/portfolio/project-descriptions/autoronto/post_lanes.gif?raw=true)\
-*Post-processing results on MCity (running at 1.5x normal speed)*
+*Post-processing results on MCity (running at 1.5x normal speed). Source: aUToronto*
 <br></br>
 
 ![Post-processing of binary mask of lanes, with occluded lane lines](https://github.com/Ammar-V/Portfolio/blob/new/portfolio/project-descriptions/autoronto/post_lanes_occlusion.gif?raw=true)\
-*Showcasing the robustness of post-processing in occluded scenes*
+*Showcasing the robustness of post-processing in occluded scenes. Source: aUToronto*
 <br></br>
 
 ## 3D Object Detection

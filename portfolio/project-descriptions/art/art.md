@@ -3,9 +3,9 @@
 ART is a subteam under the [University of Toronto Robotics Association](https://www.utra.ca/) (UTRA). ART competes at the Intelligent Ground Vehicles Competition at Oakland University in Michigan, every year in June.
 
 ### My involvement with the ART team was as follows:
-- 2021-2022: Member of the CV subteam.
+- **September 2021 - June 2022:** Member of the CV subteam.
   - Developed the Pothole Detection pipeline.
-- 2022-2023: Lead of the CV subteam.
+- **July 2022 - June 2023:** Lead of the CV subteam.
   - Developed the Lane Detection pipeline
   - Integrated the CV pipeline with the rest of the stack to aid in Simultaneous Mapping and Localization (SLAM)
 
